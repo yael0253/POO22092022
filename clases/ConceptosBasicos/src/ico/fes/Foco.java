@@ -9,6 +9,7 @@ package ico.fes;
  * @author Yael
  */
 public class Foco {
+
     private String color;
     private String tipo;
     private int tamano;
@@ -46,5 +47,9 @@ public class Foco {
         this.tipo = tipo;
     }
 
+    @Override
+    public String toString() {
+        return "Foco{" + "color=" + color + ", tipo=" + tipo + ", tamano=" + tamano + '}';
+    }
 
 }
