@@ -41,4 +41,6 @@ public class Teclado {
     public String toString() {
         return "Teclado{" + "marca=" + marca + ", numeroTeclas=" + numeroTeclas + '}';
     }
+
+   
 }
