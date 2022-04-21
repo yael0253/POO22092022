@@ -51,4 +51,17 @@ public class Alumno extends Persona {
     public void estudiar(int cantidad) {
         System.out.println(this.getNombre() + "Esta estudiando " + cantidad + "hrs");
     }
+    //Polimorfismo por sobre escrituta
+    @Override
+    public void dormir(){
+        System.out.println("El estudiante " + this.getNombre() + " esta durmiendo 5 horas.....");
+       
+    }
+    
+    //Polimorfismo por sobre carga
+    
+    public void dormir (int horasEstudio){
+        int horasDormir=8;
+        System.out.println( this.getNombre() + " esta durmiendo " + (horasDormir - horasEstudio) + " Horas");
+    }
 }
