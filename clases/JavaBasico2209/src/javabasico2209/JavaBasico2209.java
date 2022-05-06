@@ -4,6 +4,7 @@
  */
 package javabasico2209;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -55,7 +56,7 @@ public class JavaBasico2209 {
         System.out.println(resultado);
         //Codigo con operador ternario
         //<cond>? <True> : <False;>
-        int edad4 = 18;
+        int edad4 = 24;
         String res = "";
         res = edad4 < 18 ? "Menor de edad 4" : "Mayor de edad,tequila";
         System.out.println(res);
@@ -63,7 +64,7 @@ public class JavaBasico2209 {
         int edad5 = 19;
         System.out.println(edad5 < 18 ? "Menor de edad 5" : "YA! Al tequila");
 
-        int val1 = 1;
+        int val1 = 1;//4 bytea ---> 32 bits
         int val2 = 2;
         //comparacion or a nivel de bits
         /*
@@ -117,6 +118,7 @@ public class JavaBasico2209 {
         for (int i = 0; i < lista.length; i++) {
             Alumno alumno = lista[i];
             System.out.println(alumno.evaluarDesempenio());
+            alumno.estudiar(30);
         }
         
         /*For each es un FOR especial, introducido
@@ -124,9 +126,50 @@ public class JavaBasico2209 {
         El FOR EACH fue introducido para simplificar los FOR con arreglos*/
         System.out.println("--con FOR EACH---");
         for (Alumno alumno : lista) {
-            System.out.println(alumno.evaluarDesempenio());
-            
+            System.out.println(alumno.evaluarDesempenio());               
         }
+        System.out.println("----Coleccion de Java----");
+        ArrayList<Alumno> grupo2209 = new ArrayList<Alumno>();
+        grupo2209.add (new Alumno("99999", 2, 9.0f));
+        grupo2209.add (new Alumno("88888", 2, 8.0f));
+        grupo2209.add (new Alumno("77777", 2, 7.0f));
+        grupo2209.add (new Alumno("66666", 2, 6.0f));
+        grupo2209.add (new Alumno("55555", 2, 5.0f));
+        
+        for(Alumno alumno : grupo2209){
+            System.out.println(alumno);
+        }
+        
+        System.out.println("---Add con indice---");
+        grupo2209.add(2, new Alumno("81111", 33, 9.9f));
+        for (Alumno alumno : grupo2209){
+            System.out.println(alumno);            
+        }
+        System.out.println("----get(i)----");
+        Alumno tmp = grupo2209.get(3);
+        System.out.println("Alumno en index = 1 : " + tmp);
+        
+        System.out.println("----Remove(i)----");
+        System.out.println("Eliminar el index 3");
+        Alumno tmp2 = grupo2209.remove(3);
+        System.out.println("Elemento eliminado = " + tmp2);
+        for (Alumno alumno : grupo2209){
+            System.out.println(alumno);           
+        }
+        System.out.println("Reemplazar el i-nesimo");
+        Alumno tmp3 = grupo2209.set(0,new Alumno("44444", 4, 4.0f));
+        System.out.println("El sacado es = " + tmp3);
+        for (Alumno alumno : grupo2209) {
+            System.out.println(alumno);
+        }
+        
+        //Excepciones
+        try {
+           System.out.println("Excepciones");
+        System.out.println(grupo2209.get(20)); 
+        } catch (Exception e) {
+            System.out.println("Error.... revisa indices");
+        }
+        System.out.println("Fin del programa");
     }
-
 }

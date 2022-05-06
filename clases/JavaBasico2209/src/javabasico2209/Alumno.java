@@ -52,7 +52,7 @@ public class Alumno {
     }
     
     public void estudiar(int minutos){
-        System.out.println("Estuiando ..." + minutos);
+        System.out.println("Estuiando ..." + minutos +" minutos");
     }
     
     public String evaluarDesempenio(){
