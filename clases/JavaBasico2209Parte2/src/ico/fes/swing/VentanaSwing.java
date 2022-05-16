@@ -67,7 +67,7 @@ public class VentanaSwing extends JFrame {
                 } catch (NumberFormatException ex) {
                     System.out.println(ex.toString());
                     JOptionPane.showMessageDialog(null, "Introduce un valo numerico", "ERROR de captura", JOptionPane.ERROR_MESSAGE);
-                }
+                } 
             }
         });
     }
